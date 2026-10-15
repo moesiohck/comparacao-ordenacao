@@ -1,5 +1,10 @@
 # Relatório — comparação de algoritmos de ordenação
 
+## Integrantes
+
+- Moesio Lorran Almeida
+- Igor Costa
+
 ## Objetivo
 
 O objetivo deste trabalho foi implementar os algoritmos Insertion Sort e Merge Sort, testar seu funcionamento e comparar o desempenho dos dois com a função `sorted()` do Python. Foram medidos o tempo de execução e a quantidade de comparações para listas de diferentes tamanhos.

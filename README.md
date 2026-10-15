@@ -1,5 +1,11 @@
 # Comparação de algoritmos de ordenação
 
+## Integrantes
+
+- Moesio Lorran Almeida
+- Igor Costa
+
+
 Projeto da atividade de comparação entre **Insertion Sort**, **Merge Sort** e `sorted()` do Python.
 
 ## Arquivos
