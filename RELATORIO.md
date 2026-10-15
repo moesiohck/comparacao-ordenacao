@@ -46,6 +46,16 @@ O Merge Sort divide a lista em partes menores, ordena cada parte e depois interc
 
 A função `sorted()` normalmente é a mais rápida neste teste porque usa o Timsort, uma implementação otimizada em C que aproveita sequências já ordenadas e tem bom desempenho em dados reais. A contagem de comparações de `sorted()` não representa o número de comparações de pivô: o Timsort não é Quicksort e não usa pivôs.
 
+## Respostas às questões da atividade
+
+**Em que tamanho o Insertion Sort deixa de ser mais rápido que o Merge Sort?** Nos resultados desta execução, o Insertion Sort foi mais rápido para `n = 10`, enquanto o Merge Sort ficou ligeiramente mais rápido para `n = 20`. Portanto, a mudança de desempenho ocorreu entre esses dois tamanhos testados; não é possível afirmar o ponto exato de cruzamento sem medir tamanhos intermediários. Além disso, a diferença em listas pequenas pode variar de uma execução para outra.
+
+**O gráfico de comparações mostra o mesmo ponto de virada do gráfico de tempo?** Não necessariamente. A quantidade de comparações é apenas uma parte do custo total. O tempo também depende de atribuições, criação de listas auxiliares, chamadas de função, alocação de memória e detalhes da implementação. Por isso, dois algoritmos podem trocar de posição no gráfico de tempo em um tamanho diferente daquele observado no gráfico de comparações.
+
+**Por que a comparação com `sorted()` não basta para decidir entre Insertion Sort e Merge Sort?** `sorted()` usa o Timsort, que é outro algoritmo, otimizado e implementado em C. Ele funciona como referência prática, mas não isola apenas a diferença entre os dois algoritmos implementados no trabalho. Além disso, o tempo depende da implementação e do ambiente. Para comparar especificamente Insertion Sort e Merge Sort, é necessário observar também suas complexidades teóricas, contagens de comparações e comportamento em diferentes entradas.
+
+**Em que caso o Insertion Sort ainda é uma escolha adequada?** Em listas pequenas ou quase ordenadas, pois pode precisar de poucas movimentações e tem implementação simples. Também ordena a lista original sem exigir uma lista auxiliar proporcional ao tamanho da entrada.
+
 ## Comparação com o limite \(n\log n\)
 
 O crescimento \(n\log n\) é uma referência útil para algoritmos eficientes de ordenação por comparação, como o Merge Sort. O Insertion Sort pode precisar de aproximadamente \(n(n-1)/2\) comparações no pior caso, enquanto o Merge Sort cresce na ordem de \(n\log n\). Os resultados medidos são experimentais e podem variar com a máquina, a versão do Python e os dados de entrada.
